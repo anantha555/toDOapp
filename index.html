@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> TO DO </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 style="text-align: center;"> TO DO LIST </h1>
+
+    <form class="form">
+        <!-- email , tel, date validation is done using html attr of TYPE -->
+        <input type="text" name="Name" id="userName" placeholder="Enter person name (3-20 chars only)" required>
+        <br>
+        <input type="email" id ="userEmail"placeholder="Enter a vaild e-mail id" required>
+        <input type="tel" id ="userPhone" placeholder="enter a valid mobile number" required>
+        <br>
+        <input type="text" id ="userproject" placeholder="enter a  project name (3-20 chars and numbers only)" required>
+        <br>
+        <input type="text" id="userDesc" placeholder="enter task description (3-30 chars chars/num/spl char also)" required>
+        <br>        
+        <input type="date" id="UserStartDate">
+        <input type="date" id="UserEndDate">
+        <div>
+            Task Status:
+            <input type="radio" value="planned"> Planned
+            <input type="radio" value="inProgress"> In-Progress
+            <input type="radio" value="done"> Done            
+        </div>
+        <button type="submit" onclick="onSave(event)"> SAVE </button>
+        <button type="button" onclick="viewUser()"> VIEW </button>
+    </form>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>S. No</th>
+                    <th>Name</th>
+                    <th>Project</th>
+                    <th>Task</th>
+                    <th>Status</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Edit / Delete</th>
+                </tr>
+            </thead>
+            <tbody id='user_data'>
+      
+            </tbody>
+        </table>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
